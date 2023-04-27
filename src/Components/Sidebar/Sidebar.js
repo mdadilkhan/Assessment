@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 
 
-import { NavLink } from 'react-router-dom';
+import { NavLink,useLocation } from 'react-router-dom';
 import './Sidebar.css'
 
 
 const Sidebar = ({children}) => {
+    const location=useLocation();
     const[isOpen ,setIsOpen] = useState(false);
     console.log(isOpen);
     const toggle = () => setIsOpen (!isOpen);
@@ -60,7 +61,10 @@ const Sidebar = ({children}) => {
     ]
     return (
         <div className="container">
-           <div style={{width: isOpen ? "300px" : "50px"}} className="sidebar">
+           <div style={{
+            display:location.pathname==="/accounts"?"none":undefined,
+            width: isOpen ? "300px" : "50px"}} 
+            className="sidebar">
                <div className="top_section">
                    <h1 style={{display: isOpen ? "block" : "none"}} className="heading">Group of Schools</h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="toggler">

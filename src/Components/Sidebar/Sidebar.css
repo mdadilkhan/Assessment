@@ -4,6 +4,7 @@
 main{
     width: 100%;
     padding: 20px;
+    /* background: white; */
 }
 .sidebar{
     background: #000;
@@ -52,8 +53,9 @@ main{
 
 }
 .active{
-    background: lightskyblue;
+    background:rgba(248, 248, 248, 0.59);
     color: #000;
+    border-radius: 15px;
 }
 .icon, .link_text{
     font-size: 20px;

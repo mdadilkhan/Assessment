@@ -2,7 +2,7 @@ import React from 'react'
 
 const Campaign = () => {
   return (
-    <div>
+    <div className='pages'>
         <h1>Campaign</h1>
     </div>
   )
